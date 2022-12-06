@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python3-chatgpt-client"
+version = "0.1.0"
+description = "A Tiny ChatGPT Client"
+authors = ["s_hiiragi <hiiragi@example.com>"]
+readme = "README.md"
+packages = [{include = "python3_chatgpt_client"}]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai = "^0.25.0"
+python-dotenv = "^0.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
