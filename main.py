@@ -53,12 +53,17 @@ class ChatGpt(cmd.Cmd):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument('-p', '--prompt', help='Ask a prompt and exit')
     args = parser.parse_args()
 
-    try:
-        ChatGpt(args).cmdloop()
-    except KeyboardInterrupt:
-        pass
+    if args.prompt:
+        ChatGpt(args).onecmd(f'ask {args.prompt}')
+    else:
+        try:
+            ChatGpt(args).cmdloop()
+        except KeyboardInterrupt:
+            pass
+
     return 0
 
 
