@@ -47,6 +47,9 @@ class ChatGpt(cmd.Cmd):
     def do_EOF(self, line):
         return True
 
+    def emptyline(self):
+        pass
+
 
 def main():
     parser = argparse.ArgumentParser()
